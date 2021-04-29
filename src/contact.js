@@ -3,8 +3,11 @@ import {createOwnElement} from './index';
 const contentDiv = document.getElementById('content');
 
 const createContact = () => {
+    const contactContainerDiv =  createOwnElement('div', 'contact-container', null);
+    contentDiv.appendChild(contactContainerDiv);
+
     const contactDiv =  createOwnElement('div', 'contact', null);
-    contentDiv.appendChild(contactDiv);
+    contactContainerDiv.appendChild(contactDiv);
     
     const contactPhone =  createOwnElement('p', 'null', null);
     contactPhone.innerHTML = "Phone Number: 07192 102 688"
