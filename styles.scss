@@ -1,0 +1,175 @@
+@mixin flexCenter($direction) {
+    display: flex;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+$secondary-colour:  #dab67e;
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+#content {
+    background: url(../src/images/cooking-chef.jpg);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    margin: 0;
+    @include flexCenter(column);
+
+    .navBar {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        border-bottom: solid 2px $secondary-colour;
+        display: flex;
+        height: 10%;
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            height: 100%;
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            li {
+                color: white;
+                text-decoration: none;
+                font-size: 1rem;
+                text-transform: uppercase;
+                padding: 20px;
+                cursor: pointer;
+
+                &:hover {
+                    border-bottom: 2px solid $secondary-colour;
+                }
+
+                &:active {
+                    border-bottom: 2px solid$secondary-colour;
+                }
+            }
+        }
+    }
+
+    .home {
+        height: 100%;
+        width: 100%;
+        @include flexCenter(column);
+        justify-content: center;
+        color: white;
+        animation: fadeIn 1.5s;
+
+        h1 {
+            font-size: 5rem;
+            margin: 0;
+        }
+
+        .hrsplit {
+            width: 215px;
+            border: 2px solid $secondary-colour;
+        }
+
+        button {
+            margin-top: 35px;
+            padding: 10px;
+            font-size: 1rem;
+            background-color: $secondary-colour;
+            color:black;
+            cursor: pointer;
+            text-transform: uppercase;
+
+            &:hover {
+                color:white;
+            }
+        }
+        
+    }
+
+    .menu-container {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        /*.menu-overlay {
+            height: 50%;
+            width: 85%;
+            background: rgba(39, 28, 24, 0.5);
+            margin: auto 0;*/
+
+        .menu {
+            //width: 100%;
+            // height: 75%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            padding: 2rem;
+            grid-gap: 3%;
+            height: 50%;
+            width: 85%;
+            background: rgba(39, 28, 24, 0.5);
+            margin: auto 0;
+            animation: fadeIn 1.5s;
+
+            .menu-item {
+                display: flex;
+                flex-direction: row;
+                height: 100%;
+                background-color: rgba(39, 28, 24, 0.6);
+                transition: background-color 0.3s;            
+
+                img {
+                    width: 17rem;
+                    height: 10rem;
+                }
+
+                .item-description {
+                    color: white;
+                    width: 60%;
+                    text-align: center;
+
+                    p {
+                        // width:85%;
+                    }
+                }
+            }
+            //}
+        }
+    }
+
+    .contact {
+        @include flexCenter(column);
+        padding: 2rem;
+        height: 50%;
+        width: 30%;
+        background: rgba(39, 28, 24, 0.5);
+        margin: auto 0;
+        color:white;
+        font-size:1.5rem;
+        img {
+            width:80%;
+        }
+    }
+
+    .footerBar {
+        border-top: solid 2px $secondary-colour;
+        width: 100%;
+        text-align: center;
+        height: 10%;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        p {
+            color:white;
+        }
+    }
+}
