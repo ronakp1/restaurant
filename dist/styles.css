@@ -99,6 +99,12 @@ html {
   border: 2px solid #dab67e;
 }
 
+@media screen and (max-width: 500px) {
+  #content .home .hrsplit {
+    width: 50%;
+  }
+}
+
 #content .home button {
   margin-top: 35px;
   padding: 15px;
@@ -123,11 +129,6 @@ html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  /*.menu-overlay {
-            height: 50%;
-            width: 85%;
-            background: rgba(39, 28, 24, 0.5);
-            margin: auto 0;*/
 }
 
 #content .menu-container .menu {
@@ -147,6 +148,26 @@ html {
           animation: fadeIn 1.5s;
 }
 
+@media screen and (max-width: 500px) {
+  #content .menu-container .menu {
+    -ms-grid-columns: none;
+        grid-template-columns: none;
+    padding: 0;
+    height: auto;
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  #content .menu-container .menu {
+    -ms-grid-columns: none;
+        grid-template-columns: none;
+    padding: 0;
+    height: auto;
+    font-size: 0.7rem;
+  }
+}
+
 #content .menu-container .menu .menu-item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -159,11 +180,21 @@ html {
   background-color: rgba(39, 28, 24, 0.6);
   -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #content .menu-container .menu .menu-item img {
   width: 17rem;
   height: 10rem;
+}
+
+@media screen and (max-width: 500px) {
+  #content .menu-container .menu .menu-item img {
+    width: 8rem;
+    height: 5rem;
+  }
 }
 
 #content .menu-container .menu .menu-item .item-description {
@@ -192,8 +223,21 @@ html {
   font-size: 1.5rem;
 }
 
+@media screen and (max-width: 500px) {
+  #content .contact {
+    height: 60%;
+    width: 70%;
+  }
+}
+
 #content .contact img {
   width: 80%;
+}
+
+@media screen and (max-width: 500px) {
+  #content .contact img {
+    width: 100%;
+  }
 }
 
 #content .footerBar {
