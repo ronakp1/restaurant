@@ -60,6 +60,12 @@ html {
   cursor: pointer;
 }
 
+@media screen and (max-width: 400px) {
+  #content .navBar ul li {
+    padding: 10px;
+  }
+}
+
 #content .navBar ul li:hover {
   border-bottom: 2px solid #dab67e;
 }
@@ -164,7 +170,7 @@ html {
         grid-template-columns: none;
     padding: 0;
     height: auto;
-    font-size: 0.7rem;
+    font-size: 0.6rem;
   }
 }
 
@@ -185,6 +191,10 @@ html {
           align-items: center;
 }
 
+#content .menu-container .menu .menu-item:hover {
+  background-color: rgba(100, 100, 100, 0.4);
+}
+
 #content .menu-container .menu .menu-item img {
   width: 17rem;
   height: 10rem;
@@ -203,7 +213,9 @@ html {
   text-align: center;
 }
 
-#content .contact {
+#content .contact-container {
+  height: 100%;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -214,28 +226,38 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+#content .contact-container .contact {
   padding: 2rem;
-  height: 50%;
-  width: 30%;
   background: rgba(39, 28, 24, 0.5);
   margin: auto 0;
   color: white;
   font-size: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 @media screen and (max-width: 500px) {
-  #content .contact {
-    height: 60%;
+  #content .contact-container .contact {
     width: 70%;
   }
 }
 
-#content .contact img {
+#content .contact-container .contact img {
   width: 80%;
 }
 
 @media screen and (max-width: 500px) {
-  #content .contact img {
+  #content .contact-container .contact img {
     width: 100%;
   }
 }
